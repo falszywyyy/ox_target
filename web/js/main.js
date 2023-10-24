@@ -17,6 +17,10 @@ window.addEventListener("message", (event) => {
       return eye.classList.remove("eye-hover");
     }
 
+    case 'changeColor': {
+      document.body.style.setProperty('--color-default', event.data.color)
+    }
+
     case "setTarget": {
       eye.classList.add("eye-hover");
 

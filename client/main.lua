@@ -453,3 +453,8 @@ RegisterNUICallback('select', function(data, cb)
         state.setActive(false)
     end
 end)
+
+
+RegisterNetEvent('ox_target:changeColor', function(color)
+    SendNuiMessage('{"event": "changeColor", "color": '+color+'}')
+end)
